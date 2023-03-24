@@ -10,21 +10,21 @@ https://hack.opendata.ch/project/943
 
 Die zahlreichen Mitarbeitenden des Infodesk der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html) sind täglich mit einer Fülle von telefonischen Anfragen konfrontiert. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, AHV-Beiträgen wie auch IV-Taggeldern.
 
-Es besteht keine Anfragedatenbank, welche Fragen und Antworten von Kunden/innen
+Es besteht keine Anfragedatenbank mit Fragen und Antworten von Kunden/innen, die als Trainingsdaten verwendet werden konnte.
 
-In etwa 75% der Anfragen sind einfach zu beantworten und können anhand von Informationen, die auf der [Webseite](https://www.eak.admin.ch/eak/de/home.html) stehen, beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zeitaufwendig.
+Etwa 75% der Anfragen sind von den Mitarbeitenden einfacher und können anhand von Informationen, die auf der [Webseite der EAK](https://www.eak.admin.ch/eak/de/home.html) stehen, beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zeitaufwendig.
 
 # Lösung
 
 ## AI Chatbot als Co-Pilot
 
-Ein digitaler Assistent, welcher jegliche Fragen mittels simpler Prompts auf Basis aller Informationen die auf der Webseite verfügbar sind beantworten kann, hat das Potential, Zeit und Ressourcen zu schonen.
+Ein digitaler Assistent, welcher jegliche Fragen mittels simpler Prompts auf Basis aller Informationen, die auf der Webseite verfügbar sind beantworten kann, hat das Potential, Zeit und Ressourcen zu schonen.
 
 In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse Antworten auf Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern.
 
-Die Herausforderung liegt darin, dass keine Fehlertolleranz besteht - die Antworten müssen stets präzise und akurat sein.
+Die Herausforderung liegt darin, dass keine Fehlertoleranz besteht - die Antworten müssen stets präzise und akurat sein.
 
-Das Ziel ist, dass Mitarbeitende, und langfristig auch Versicherte, damit schnell und effizient Fragen zur 1.Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
+Das Ziel ist, dass Mitarbeitende und langfristig auch Versicherte mit dem Bot schnell und effizient Fragen zur 1. Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
 
 ## Grundlagen Embedding / Fine-Tuning
 
@@ -35,37 +35,37 @@ Bei beiden Modellen ist die Qualität der verarbeiteten Daten von entscheidender
 ### Embedding
 
 Beim Embedding werden Wörter, Dokumente oder Phrasen als Vektoren dargestellt, die sowohl die Bedeutung als auch den Kontext erfassen. Dies ermöglicht es, semantische Ähnlichkeiten zu erfassen, indem ähnliche Wörter / Phrasen innerhalb dieser Vektoren näher beieinanderliegen.
-Embedding ist die richtige Wahl, wenn ein großes Textkorpus wie z.B. ein Lehrbuch, juristische Dokumente etc. zur Verfügung steht und das Modell darauf trainiert werden soll.
+Embedding ist die richtige Wahl, wenn ein grosser Textkorpus wie z.B. ein Lehrbuch, juristische Dokumente etc. zur Verfügung steht und das Modell darauf trainiert werden soll.
 [Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
 
 ### Fine-Tuning
 
-Wenn jedoch weniger Wert auf spezifische Fakten gelegt wird und GPT-3 z.B. darauf trainiert werden soll, Nachrichten nach dem persönlichen Stil zu erfassen, dann ist das Fine-Tuning die richtige Wahl.
-Beim Fine-Tuning trainieren Sie GPT-3 auf eine bestimmte Struktur, ein bestimmtes Muster oder einen bestimmten Sprachstil anhand von Beispieldaten. Kurz gesagt, das GPT-3 Basismodell wird mit neuen Mustern, Regeln und Vorlagen neu trainiert.
-Nach Angaben von openAI werden für ein erfolgreiches Modell einige tausend bis zehntausend Datenpunkte benötigt.
+Wenn jedoch weniger Wert auf spezifische Fakten gelegt wird und GPT-3 z.B. darauf trainiert werden soll, Nachrichten nach einem bestimmten Stil zu schreiben, dann ist das Fine-Tuning die richtige Wahl.
+Beim Fine-Tuning trainieren wir GPT-3 auf eine bestimmte Struktur, ein bestimmtes Muster oder einen bestimmten Sprachstil anhand von Beispieldaten. Kurz gesagt, das GPT-3 Basismodell wird mit neuen Mustern, Regeln und Vorlagen neu trainiert.
+Nach Angaben von OpenAI werden für ein erfolgreiches Modell einige tausend bis zehntausend Datenpunkte benötigt.
 [Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
 
 ### Fine-Tuning vs Embedding
 
-Diese Modelle können in bestimmten Fällen auch kombiniert werden: Die Embedding-API wird verwendet, um eine Wissensbasis zu lernen, und anschließend kann das Fine-Tuning verwendet werden, um auf eine bestimmte Art und Weise zu reagieren.
+Diese Modelle können in bestimmten Fällen auch kombiniert werden: Die Embedding-API wird verwendet, um eine Wissensbasis zu lernen und anschließend kann das Fine-Tuning verwendet werden, um auf eine bestimmte Art und Weise zu reagieren.
 [Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
 
 ## Lösungsansatz
 
 1. Extraktion der Texte auf der Webseite mittels Webscraping
-2. Training eines openAI-Modells mit den Webseitexten als Input
-3. Entwicklung eines GUI / Deployment der App
-4. Generalisierung der Skripte als Blueprint für andere Webseiten
+2. Embedding der Texte, semantisch nahe Textteile werden als «Context» zur Beantwortung der Frage als Prompt mitgegeben
+3. Entwicklung eines GUI, Deployment der App
+4. Generalisierung der Skripte als Blueprint für andere Anwendungsszenarien und Interessenten
 
 ### Webscraping via Python
 
 Link zu Scripts
 
-### Training eines openAI-Modells mittels Embeddings
+### Training eines OpenAI-Modells mittels Embeddings
 
 Link zu Script
 
-### Otimierungen - Vektordatenbank
+### Optimierungen - Vektordatenbank
 
 Wenn ein Embedding-Model verwendet wird, ist es sinnvoll eine Vektordatenbank zu verwenden, damit eine effektive Suche nach ähnlichen oder verwandten Elementen zu ermöglichen. Die Auswahl der richtigen Vektordatenbank ist von entscheidender Bedeutung. Dabei spielen folgende Faktoren eine wichtige Rolle: Grösse der Datenbank, Art der Embeddings, Art der Suchanfragen und Leistungsanforderungen.
 [Quelle](https://betterprogramming.pub/openais-embedding-model-with-vector-database-b69014f04433)
