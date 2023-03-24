@@ -12,7 +12,7 @@ Die zahlreichen Mitarbeitenden des Infodesk der [eidgenössichen Ausgleichskasse
 
 Es besteht keine Anfragedatenbank, welche Fragen und Antworten von Kunden/innen 
 
-In etwa 75% der Anfragen sind simpel und können anhand von Informationen, die auf der [Webseite](https://www.eak.admin.ch/eak/de/home.html) stehen, beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zeitaufwendig.
+In etwa 75% der Anfragen sind einfach zu beantworten und können anhand von Informationen, die auf der [Webseite](https://www.eak.admin.ch/eak/de/home.html) stehen, beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zeitaufwendig.
 
 # Lösung 
 
