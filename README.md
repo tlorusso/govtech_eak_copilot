@@ -26,10 +26,6 @@ Ein digitaler Assistent, welcher jegliche Fragen mittels simpler Prompts auf Bas
 
 In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse Antworten auf Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern. Die Herausforderung liegt darin, dass keine Fehlertoleranz besteht - die Antworten müssen stets präzise und akurat sein. Das Ziel ist, dass Mitarbeitende und langfristig auch Versicherte mit dem Bot schnell und effizient Fragen zur 1. Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
 
-## Architektur 
-Wir haben eine Architektur entworfen, die in den nächsten Schritten und auf lange Sicht dieses Problem lösen wird.
-
-![Architektur](https://user-images.githubusercontent.com/101552635/227545544-5d0b868b-4ae5-4eff-b2cf-443c7bb81cba.png)
 
 ## Lösungsansatz & Skripts
 
@@ -44,6 +40,13 @@ Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an
 4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
 
 > Requirements : [Directus](https://github.com/directus/directus) / [Docker](https://github.com/docker)
+
+
+## Architektur 
+Wir haben eine Architektur entworfen, die in den nächsten Schritten und auf lange Sicht dieses Problem lösen wird.
+![Architekture](https://user-images.githubusercontent.com/101552635/227547964-d869f7c8-b505-4384-a91d-5d04d1f867f6.png)
+
+
 
 ## Grundlagen Embedding / Fine-Tuning
 
