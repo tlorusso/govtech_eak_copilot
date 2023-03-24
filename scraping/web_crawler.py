@@ -57,7 +57,7 @@ def get_question_answers_from_file(fileName,qa):
         parse_question_answer_from_html(soup,qa)
         
                
-
+# Will visit the pages in the CSV file and extract questions / answers there. 
 def main():
     csvFile = input("Enter path to a CSV file containing 1 column with URL's to visit: ");
     qa =[];
