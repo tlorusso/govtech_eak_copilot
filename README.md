@@ -24,10 +24,16 @@ Das Ziel ist, dass Mitarbeitende, und langfristig auch Versicherte, damit schnel
 
 ## Lösungsansatz 
 
-- Extraktion der Texte auf der Webseite mittels Webscraping
-- Training eines openAI-Modells mit den Webseitexten als Input
+1. Extraktion der Texte auf der Webseite mittels Webscraping
+2. Training eines openAI-Modells mit den Webseitexten als Input
 
-## Scripts 
+### Webscraping via Python
+
+Link zu Scripts
+
+### Training eines openAI-Modells mittels Embeddings
+
+Link zu Script 
 
 
 
