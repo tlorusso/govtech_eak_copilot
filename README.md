@@ -21,6 +21,11 @@ Ein digitaler Assistent, welcher jegliche Fragen mittels simpler Prompts auf Bas
 
 In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse Antworten auf Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern. Die Herausforderung liegt darin, dass keine Fehlertoleranz besteht - die Antworten müssen stets präzise und akurat sein. Das Ziel ist, dass Mitarbeitende und langfristig auch Versicherte mit dem Bot schnell und effizient Fragen zur 1. Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
 
+## Architektur 
+Wir haben eine Architektur entworfen, die in den nächsten Schritten und auf lange Sicht dieses Problem lösen wird.
+
+![Architektur](https://user-images.githubusercontent.com/101552635/227545544-5d0b868b-4ae5-4eff-b2cf-443c7bb81cba.png)
+
 ## Lösungsansatz & Skripts
 
 Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an die Bedürfnisse anderer Verwaltungsstellen angepasst werden kann.
