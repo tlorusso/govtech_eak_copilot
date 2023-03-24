@@ -1,7 +1,8 @@
-streamlit
+jupyterlab
 pandas
 numpy
 matplotlib
 plotly
+beautifulsoup4
+streamlit
 openai
-jupyterlab
