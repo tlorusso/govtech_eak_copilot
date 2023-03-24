@@ -16,7 +16,7 @@ In etwa 75% der Anfragen sind simpel und können anhand von Informationen, die a
 
 ## AI Chatbot als Co-Pilot 
 
-Ein Chatbot, welcher diese Fragen mittels simpler Prompts aufgrund aller Informationen die auf der Webseite verfügbar sind beantwortet würde Zeit und Ressourcen schonen. 
+Ein Chatbot, welcher Fragen mittels simpler Prompts auf Basis aller Informationen die auf der Webseite verfügbar sind beantwortet hat das Potential, Zeit und Ressourcen.
 
 In einem ersten Schritt könnte der Chatbot als Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse die Antworten auf die Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern. Die Herausforderung liegt darin, dass keine Fehlertolleranz besteht - die Antworten müssen stets präzise und akurat sein.
 
