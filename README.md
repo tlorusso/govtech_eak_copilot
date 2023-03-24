@@ -33,7 +33,7 @@ Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an
 
 4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
 
-Requirements: [Directus](https://github.com/directus/directus) / [Docker](https://github.com/docker)
+> Requirements : [Directus](https://github.com/directus/directus) / [Docker](https://github.com/docker)
 
 ## Grundlagen Embedding / Fine-Tuning
 
