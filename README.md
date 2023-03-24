@@ -19,11 +19,7 @@ Repository für die Challenge für die Entwicklung eines AI-Chatbots als Co-Pilo
 
 Ein digitaler Assistent, welcher jegliche Fragen mittels simpler Prompts auf Basis aller Informationen, die auf der Webseite verfügbar sind beantworten kann, hat das Potential, Zeit und Ressourcen zu schonen.
 
-In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse Antworten auf Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern.
-
-Die Herausforderung liegt darin, dass keine Fehlertoleranz besteht - die Antworten müssen stets präzise und akurat sein.
-
-Das Ziel ist, dass Mitarbeitende und langfristig auch Versicherte mit dem Bot schnell und effizient Fragen zur 1. Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
+In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse Antworten auf Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern. Die Herausforderung liegt darin, dass keine Fehlertoleranz besteht - die Antworten müssen stets präzise und akurat sein. Das Ziel ist, dass Mitarbeitende und langfristig auch Versicherte mit dem Bot schnell und effizient Fragen zur 1. Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
 
 ## Lösungsansatz & Skripts
 
