@@ -11,7 +11,7 @@ Mit dieser UI ist es auch möglich, neue Inhalte hinzuzufügen. Wir verwenden di
 - eine API zum Lesen und Anpassen der Daten 
 
 # Einrichten
-1) Passen Sie die Einstellungen an in ´backend.ym´.
+1) Passen Sie die Einstellungen an in `backend.ym`.
 2) Deployen Sie die Docker-Datei bei Ihrem bevorzugten Cloud-Anbieter.
 3) Wenden Sie die Änderung des Datenmodells über die Rest-API an, wie hier beschrieben: https://docs.directus.io/reference/system/schema.html#retrieve-schema-difference
 4) Geniessen Sie die Nutzung Ihres Web Admin. 😎
