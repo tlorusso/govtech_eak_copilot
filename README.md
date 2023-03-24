@@ -1,6 +1,6 @@
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://img.shields.io/badge/Lifecycle-Experimental-339999)
 
-# AI-Chatbot als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV)
+# :wave: AI-Chatbot als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV)
 
 Repository für die Challenge für die Entwicklung eines AI-Chatbots als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV) am [Govtech-Hackathon 2023](https://hack.opendata.ch/).
 
@@ -29,13 +29,13 @@ Das Ziel ist, dass Mitarbeitende und langfristig auch Versicherte mit dem Bot sc
 
 Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an die Bedürfnisse anderer Verwaltungsstellen angepasst werden kann.
 
-### 1. Extraktion der Texte auf der Webseite mittels Webscraping [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/01_scraping)
+1. Extraktion der Texte auf der Webseite mittels Webscraping [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/01_scraping)
 
-### 2. Embedding der Texte, semantisch nahe Textteile werden als «Context» zur Beantwortung der Frage als Prompt mitgegeben [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/02_embedding)
+2. Embedding der Texte, semantisch nahe Textteile werden als «Context» zur Beantwortung der Frage als Prompt mitgegeben [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/02_embedding)
 
-### 3. Entwicklung eines GUI, Deployment der App [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/03_app)
+3. Entwicklung eines GUI, Deployment der App [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/03_app)
 
-### 4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
+4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
 
 ## Grundlagen Embedding / Fine-Tuning
 
