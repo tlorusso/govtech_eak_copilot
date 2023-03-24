@@ -30,6 +30,8 @@ Das Ziel ist, dass Mitarbeitende, und langfristig auch Versicherte, damit schnel
 
 1. Extraktion der Texte auf der Webseite mittels Webscraping
 2. Training eines openAI-Modells mit den Webseitexten als Input
+3. Entwicklung eines GUI / Deployment der App
+4. Generalisierung der Skripte als Blueprint für andere Webseiten
 
 ### Webscraping via Python
 
