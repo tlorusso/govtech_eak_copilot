@@ -1,6 +1,6 @@
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://img.shields.io/badge/Lifecycle-Experimental-339999)
 
-# AI-Chatbot als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV)
+# :wave: AI-Chatbot als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV)
 
 Repository für die Challenge für die Entwicklung eines AI-Chatbots als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV) am [Govtech-Hackathon 2023](https://hack.opendata.ch/).
 
