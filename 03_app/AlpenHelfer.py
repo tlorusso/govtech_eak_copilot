@@ -112,7 +112,7 @@ st.caption("Dieser Auskunftsbot ist ein Experiment, das im Rahmen des [GovTech H
 
 st.caption("PS: Der Name **«AlpenHelfer»** ist - wie könnte es anders sein – mit ChatGPT v4 kreiert. 😉 PPS: Der zweitbeste Vorschlag war «KäseBot»... 💩")
 
-st.caption("Beispielfragen: Wann wird meine Altersrente im Juni 2023 ausbezahlt? Wann tritt die neue AHV-Reform in Kraft? Wer leitet die EAK? Muss ich auch nach der Pensionierung AHV-Beiträge bezahlen?")
+st.caption("Beispielfragen: Wann wird meine Altersrente im Juni 2023 ausbezahlt? Wann tritt die neue AHV-Reform in Kraft? Wer leitet die EAK? Muss ich auch nach der Pensionierung AHV-Beiträge bezahlen? Berchumi chinderzüälage wenni järlich weniger als 7000 verdiänu?")
 
 st.markdown("""---""")
 search_box = st.text_input("Was möchtest Du gern von mir wissen? 😊", max_chars=500)
