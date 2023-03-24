@@ -33,6 +33,8 @@ Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an
 
 4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
 
+Requirements: [Directus](https://github.com/directus/directus) / [Docker](https://github.com/docker)
+
 ## Grundlagen Embedding / Fine-Tuning
 
 Embedding und Fine-Tuning sind zwei Methoden, um GPT-3 auf Daten zu trainieren. Sie unterscheiden sich jedoch in der Art des Trainings und dienen unterschiedlichen Zwecken. Der Hauptunterschied besteht darin, dass beim Embedding die Wörter und Texte als Vektoren dargestellt werden, während beim Fine-Tuning ein vortrainiertes Modell an bestimmte Daten angepasst wird.
