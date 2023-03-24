@@ -8,7 +8,7 @@ from os.path import isfile, join
 import csv
 import time
 
-def get_text_from_url(url):
+def get_source_code_from_url(url):
     response = requests.get(url)
     if response.status_code == 200:
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -20,11 +20,12 @@ def get_text_from_url(url):
 
 def get_question_answers_from_url(url,qa):
     print(f"Visiting: {url}")
-    soup = get_text_from_url(url)
+    soup = get_source_code_from_url(url)
     if soup:
         parse_question_answer_from_html(soup,qa, url)
     
 
+# This method can be adapted by yourself to have your own logic
 def parse_question_answer_from_html (web_response,qa,url):
     domain_eak ="eak.admin.ch";
     domain_ahv_iv =  "ahv-iv.ch";
