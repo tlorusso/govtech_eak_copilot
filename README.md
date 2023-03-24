@@ -4,7 +4,7 @@
 
 Repository für die Challenge für die Entwicklung eines AI-Chatbots als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV) am [Govtech-Hackathon 2023](https://hack.opendata.ch/).
 
-https://hack.opendata.ch/project/943
+[Challenge-Landingpage](https://hack.opendata.ch/project/943)
 
 # Herausforderung / Ausgangslage
 
