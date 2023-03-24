@@ -1,5 +1,5 @@
 # Intro :
-
+Ein Wunsch des Kunden war es, die für den ChatBot verwendeten Daten beschriften / verwalten zu können. Um diesen Bedarf zu decken, haben wir diese einfache Admin UI implementiert. 
 
 
 # Verwendete Technologie  
