@@ -8,11 +8,10 @@ https://hack.opendata.ch/project/943
 
 # Herausforderung / Ausgangslage
 
-Die zahlreichen Mitarbeitenden der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html) sind täglich mit einer Fülle von telefonischen Anfragen konfrontiert. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, AHV-Beiträgen wie auch IV-Taggeldern.
-
-Es besteht keine Anfragedatenbank mit Fragen und Antworten von und an Kunden/innen, die als Trainingsdaten verwendet werden konnte.
-
-Etwa 75% der Anfragen sind von den Mitarbeitenden einfacher und können anhand von Informationen, die auf der [Webseite der EAK](https://www.eak.admin.ch/eak/de/home.html) stehen, beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zeitaufwendig.
+- Die zahlreichen Mitarbeitenden des Infodesk der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html) sind täglich mit einer Fülle von telefonischen Anfragen konfrontiert. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, AHV-Beiträgen wie auch IV-Taggeldern.
+- Etwa 75% der Anfragen sind einfachere und können grundsätzlich anhand von Informationen auf der [Webseite der EAK](https://www.eak.admin.ch/eak/de/home.html) beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zugleich zeitaufwendig.
+- Ein Assistenzsystem muss eine sehr hohe Antwortgenauigkeit bieten und im Idealfall keinerlei Fehler machen. 
+- Das Team vom Anfragedienst hat bisher keine Anfragedatenbank mit Fragen und Antworten von Kunden:innen geführt, die als Trainingsdaten verwendet werden konnte.
 
 # Lösung
 
