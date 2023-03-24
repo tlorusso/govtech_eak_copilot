@@ -31,7 +31,7 @@ df = read_data()
 # FUNCTIONS --------------------------------------------------------------- #
 
 def clean_text(text):
-    text = re.sub(r'(\n|\r\n|\r|\t|#)+', ' ', text) 
+    text = re.sub(r'(\n|\r\n|\r|\t|#)+', ' ', text)
     return text
 
 
@@ -46,25 +46,26 @@ def create_context(question, df, max_len=1800, size="ada"):
     # Get the distances from the embeddings
     df['distances'] = distances_from_embeddings(q_embeddings, df['embeddings'].values, distance_metric='cosine')
 
-
     returns = []
+    reference_links = []
     cur_len = 0
 
     # Sort by distance and add the text to the context until the context is too long
     for i, row in df.sort_values('distances', ascending=True).iterrows():
-        
+
         # Add the length of the text to the current length
         cur_len += row['n_tokens'] + 4
-        
+
         # If the context is too long, break
         if cur_len > max_len:
             break
-        
+
         # Else add it to the text that is being returned
         returns.append(row["content"])
-        
-    # Return the context
-    return "\n\n###\n\n".join(returns)
+        reference_links.append(row["url"])
+
+    # Return the context and links, from which the information stems
+    return "\n\n###\n\n".join(returns), reference_links
 
 def answer_question(
     df,
@@ -78,7 +79,8 @@ def answer_question(
     """
     Answer a question based on the most similar context from the dataframe texts
     """
-    context = create_context(
+
+    context, links = create_context(
         question,
         df,
         max_len=max_len,
@@ -97,7 +99,7 @@ def answer_question(
             stop=stop_sequence,
             model=model,
         )
-        return context, response["choices"][0]["text"].strip()
+        return response["choices"][0]["text"].strip(), context, links
     except Exception as e:
         print(e)
         return ""
@@ -107,30 +109,21 @@ def answer_question(
 
 st.title("👋 AlpenHelfer - dein freundlicher Fragebot")
 st.caption("Dieser Auskunftsbot ist ein Experiment, das im Rahmen des [GovTech Hackathon 2023](https://www.bk.admin.ch/govtech-hackathon) für die [EAK](https://www.eak.admin.ch/eak/de/home.html) entwickelt wurde. Die Applikation soll Mitarbeitende unterstützen, Anfragen von Unternehmen sowie Bürgerinnen und Bürgern einfach zu beantworten. Die App zeigt das Prinzip eines Assistenzsystems auf. **Die Antworten dies Proof of Concept sind in keiner Weise für tatsächliche Fragestellungen anwendbar.**")
-st.caption("PS: Der Name «AlpenHelfer» ist - wie könnte es anders sein, mit ChatGPT v4 kreiert. 😉 PPS: Der zweitbeste Vorschlag war «KäseBot»... 💩")
+st.caption("PS: Der Name **«AlpenHelfer»** ist - wie könnte es anders sein – mit ChatGPT v4 kreiert. 😉 PPS: Der zweitbeste Vorschlag war «KäseBot»... 💩")
 
-st.markdown("""---""") 
+st.markdown("""---""")
 search_box = st.text_input("Was möchtest Du gern von mir wissen? 😊", max_chars=500)
 
 
 if search_box != "":
-    context, answer = answer_question(df, question=search_box)
+    answer, context, links = answer_question(df, question=search_box)
 
     st.markdown(f":green[**{answer}**]")
 
-    st.markdown("""---""") 
+    st.markdown("""---""")
     st.markdown("Dies sind die Textabschnitte von den Webseiten der [EAK](https://www.eak.admin.ch/eak/de/home.html) und der [Informationsstelle AHV/IV](https://www.ahv-iv.ch/de/), aus denen «AlpenHelfer» die Antwort generiert hat.\n\n")
     context = clean_text(context)
     st.caption(context)
-
-
-
-
-
-
-
-
-
-
-
-
+    links = ["- " + link for link in links]
+    links = "\n\n".join(links)
+    st.caption(f"Die Textabschnitte stammen von diesen Links:\n\n{links}")
