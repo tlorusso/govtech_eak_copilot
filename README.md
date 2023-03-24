@@ -33,7 +33,7 @@ Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an
 
 2. Embedding der Texte, semantisch nahe Textteile werden als «Context» zur Beantwortung der Frage als Prompt mitgegeben [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/02_embedding)
 
-3. Entwicklung eines GUI, Deployment der App [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/03_app)
+3. Entwicklung eines GUI & Deployment der App [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/03_app)
 
 4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
 
