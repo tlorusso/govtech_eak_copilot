@@ -109,7 +109,10 @@ def answer_question(
 
 st.title("👋 AlpenHelfer - dein freundlicher Fragebot")
 st.caption("Dieser Auskunftsbot ist ein Experiment, das im Rahmen des [GovTech Hackathon 2023](https://www.bk.admin.ch/govtech-hackathon) für die [EAK](https://www.eak.admin.ch/eak/de/home.html) entwickelt wurde. Die Applikation soll Mitarbeitende unterstützen, Anfragen von Unternehmen sowie Bürgerinnen und Bürgern einfach zu beantworten. Die App zeigt das Prinzip eines Assistenzsystems auf. **Die Antworten dies Proof of Concept sind in keiner Weise für tatsächliche Fragestellungen anwendbar.**")
+
 st.caption("PS: Der Name **«AlpenHelfer»** ist - wie könnte es anders sein – mit ChatGPT v4 kreiert. 😉 PPS: Der zweitbeste Vorschlag war «KäseBot»... 💩")
+
+st.caption("Beispielfragen: Wann wird meine Altersrente im Juni 2023 ausbezahlt? Wann tritt die neue AHV-Reform in Kraft? Wer leitet die EAK? Muss ich auch nach der Pensionierung AHV-Beiträge bezahlen?")
 
 st.markdown("""---""")
 search_box = st.text_input("Was möchtest Du gern von mir wissen? 😊", max_chars=500)
@@ -121,9 +124,10 @@ if search_box != "":
     st.markdown(f":green[**{answer}**]")
 
     st.markdown("""---""")
-    st.markdown("Dies sind die Textabschnitte von den Webseiten der [EAK](https://www.eak.admin.ch/eak/de/home.html) und der [Informationsstelle AHV/IV](https://www.ahv-iv.ch/de/), aus denen «AlpenHelfer» die Antwort generiert hat.\n\n")
+    st.markdown("*Transparenzinformation für Mitarbeitende der EAK*")
+    st.caption("**Dies sind die Textabschnitte von den Webseiten der [EAK](https://www.eak.admin.ch/eak/de/home.html) und der [Informationsstelle AHV/IV](https://www.ahv-iv.ch/de/), aus denen «AlpenHelfer» die Antwort generiert hat.**\n\n")
     context = clean_text(context)
     st.caption(context)
     links = ["- " + link for link in links]
     links = "\n\n".join(links)
-    st.caption(f"Die Textabschnitte stammen von diesen Links:\n\n{links}")
+    st.caption(f"**Die Textabschnitte stammen von diesen Links:**\n\n{links}")
