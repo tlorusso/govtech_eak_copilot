@@ -8,9 +8,9 @@ https://hack.opendata.ch/project/943
 
 # Herausforderung / Ausgangslage
 
-Die zahlreichen Mitarbeitenden des Infodesk der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html) sind täglich mit einer Fülle von telefonischen Anfragen konfrontiert. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, AHV-Beiträgen wie auch IV-Taggeldern.
+Die zahlreichen Mitarbeitenden der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html) sind täglich mit einer Fülle von telefonischen Anfragen konfrontiert. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, AHV-Beiträgen wie auch IV-Taggeldern.
 
-Es besteht keine Anfragedatenbank mit Fragen und Antworten von Kunden/innen, die als Trainingsdaten verwendet werden konnte.
+Es besteht keine Anfragedatenbank mit Fragen und Antworten von und an Kunden/innen, die als Trainingsdaten verwendet werden konnte.
 
 Etwa 75% der Anfragen sind von den Mitarbeitenden einfacher und können anhand von Informationen, die auf der [Webseite der EAK](https://www.eak.admin.ch/eak/de/home.html) stehen, beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zeitaufwendig.
 
