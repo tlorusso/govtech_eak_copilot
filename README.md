@@ -10,23 +10,47 @@ https://hack.opendata.ch/project/943
 
 Die zahlreichen Mitarbeitenden des Infodesk der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html) sind täglich mit einer Fülle von telefonischen Anfragen konfrontiert. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, AHV-Beiträgen wie auch IV-Taggeldern.
 
-Es besteht keine Anfragedatenbank, welche Fragen und Antworten von Kunden/innen 
+Es besteht keine Anfragedatenbank, welche Fragen und Antworten von Kunden/innen
 
 In etwa 75% der Anfragen sind einfach zu beantworten und können anhand von Informationen, die auf der [Webseite](https://www.eak.admin.ch/eak/de/home.html) stehen, beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zeitaufwendig.
 
-# Lösung 
+# Lösung
 
-## AI Chatbot als Co-Pilot 
+## AI Chatbot als Co-Pilot
 
-Ein digitaler Assistent, welcher jegliche Fragen mittels simpler Prompts auf Basis aller Informationen die auf der Webseite verfügbar sind beantworten kann, hat das Potential, Zeit und Ressourcen zu schonen. 
+Ein digitaler Assistent, welcher jegliche Fragen mittels simpler Prompts auf Basis aller Informationen die auf der Webseite verfügbar sind beantworten kann, hat das Potential, Zeit und Ressourcen zu schonen.
 
-In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse Antworten auf Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern. 
+In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse Antworten auf Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern.
 
 Die Herausforderung liegt darin, dass keine Fehlertolleranz besteht - die Antworten müssen stets präzise und akurat sein.
 
 Das Ziel ist, dass Mitarbeitende, und langfristig auch Versicherte, damit schnell und effizient Fragen zur 1.Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
 
-## Lösungsansatz 
+## Grundlagen Embedding / Fine-Tuning
+
+Embedding und Fine-Tuning sind zwei Methoden, um GPT-3 auf Daten zu trainieren. Sie unterscheiden sich jedoch in der Art des Trainings und dienen unterschiedlichen Zwecken. Der Hauptunterschied besteht darin, dass beim Embedding die Wörter und Texte als Vektoren dargestellt werden, während beim Fine-Tuning ein vortrainiertes Modell an bestimmte Daten angepasst wird.
+Bei beiden Modellen ist die Qualität der verarbeiteten Daten von entscheidender Bedeutung. Kurz gesagt: Je mehr Daten in hoher Qualität vorliegen, desto besser kann das Modell trainiert werden und desto bessere Ergebnisse liefert es.
+[Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
+
+### Embedding
+
+Beim Embedding werden Wörter, Dokumente oder Phrasen als Vektoren dargestellt, die sowohl die Bedeutung als auch den Kontext erfassen. Dies ermöglicht es, semantische Ähnlichkeiten zu erfassen, indem ähnliche Wörter / Phrasen innerhalb dieser Vektoren näher beieinanderliegen.
+Embedding ist die richtige Wahl, wenn ein großes Textkorpus wie z.B. ein Lehrbuch, juristische Dokumente etc. zur Verfügung steht und das Modell darauf trainiert werden soll.
+[Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
+
+### Fine-Tuning
+
+Wenn jedoch weniger Wert auf spezifische Fakten gelegt wird und GPT-3 z.B. darauf trainiert werden soll, Nachrichten nach dem persönlichen Stil zu erfassen, dann ist das Fine-Tuning die richtige Wahl.
+Beim Fine-Tuning trainieren Sie GPT-3 auf eine bestimmte Struktur, ein bestimmtes Muster oder einen bestimmten Sprachstil anhand von Beispieldaten. Kurz gesagt, das GPT-3 Basismodell wird mit neuen Mustern, Regeln und Vorlagen neu trainiert.
+Nach Angaben von openAI werden für ein erfolgreiches Modell einige tausend bis zehntausend Datenpunkte benötigt.
+[Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
+
+### Fine-Tuning vs Embedding
+
+Diese Modelle können in bestimmten Fällen auch kombiniert werden: Die Embedding-API wird verwendet, um eine Wissensbasis zu lernen, und anschließend kann das Fine-Tuning verwendet werden, um auf eine bestimmte Art und Weise zu reagieren.
+[Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
+
+## Lösungsansatz
 
 1. Extraktion der Texte auf der Webseite mittels Webscraping
 2. Training eines openAI-Modells mit den Webseitexten als Input
@@ -39,7 +63,9 @@ Link zu Scripts
 
 ### Training eines openAI-Modells mittels Embeddings
 
-Link zu Script 
+Link zu Script
 
+### Otimierungen - Vektordatenbank
 
-
+Wenn ein Embedding-Model verwendet wird, ist es sinnvoll eine Vektordatenbank zu verwenden, damit eine effektive Suche nach ähnlichen oder verwandten Elementen zu ermöglichen. Die Auswahl der richtigen Vektordatenbank ist von entscheidender Bedeutung. Dabei spielen folgende Faktoren eine wichtige Rolle: Grösse der Datenbank, Art der Embeddings, Art der Suchanfragen und Leistungsanforderungen.
+[Quelle](https://betterprogramming.pub/openais-embedding-model-with-vector-database-b69014f04433)
