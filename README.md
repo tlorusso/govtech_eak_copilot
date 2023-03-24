@@ -2,7 +2,7 @@
 
 # :wave: AI-Chatbot als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV)
 
-Repository für die Challenge für die Entwicklung eines AI-Chatbots als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV) am [Govtech-Hackathon 2023](https://hack.opendata.ch/).
+Repository für die Challenge «Entwicklung eines AI-Chatbots als Co-Pilot für die Mitarbeitenden der 1. Säule (AHV/IV)» am [Govtech-Hackathon 2023](https://hack.opendata.ch/).
 
 :arrow_right: [Challenge-Landingpage](https://hack.opendata.ch/project/943)
 
@@ -14,17 +14,16 @@ Repository für die Challenge für die Entwicklung eines AI-Chatbots als Co-Pilo
 # Herausforderung / Ausgangslage
 
 - Die zahlreichen __Mitarbeitenden der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html)__ sind täglich mit __einer Fülle von telefonischen Anfragen konfrontiert__. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, Leistungen wie auch EO- oder IV-Taggeldern.
-- Etwa __75% der Anfragen sind einfach zu beantworten__ und können grundsätzlich anhand von Informationen auf der [Webseite der EAK](https://www.eak.admin.ch/eak/de/home.html) beantwortet werden. Die Suche nach den richtigen Antworten und Informationen auf der Webseite ist jedoch ziemlich zeitaufwendig.
-- Ein __Assistenzsystem__ zur Beantwortung der Fragen muss eine __sehr hohe Antwortgenauigkeit bieten und im Idealfall keinerlei Fehler machen__. 
+- Etwa __75% der Anfragen sind einfach zu beantworten__ und können grundsätzlich anhand von Informationen auf der [Webseite der EAK](https://www.eak.admin.ch/eak/de/home.html) beantwortet werden. Die Suche nach den richtigen Antworten und Informationen auf der Webseite ist jedoch zeitaufwendig.
+- Ein __Assistenzsystem__ zur Beantwortung der Fragen muss eine __sehr hohe Antwortgenauigkeit bieten und soll im Idealfall keinerlei Fehler machen__. 
 - Die __EAK hat bisher keine Anfragedatenbank__ mit Fragen und Antworten von Kunden:innen geführt, die als Trainingsdaten verwendet werden konnte.
 
 # Lösung
 
 ## AI Chatbot als Co-Pilot
 
-Ein digitaler Assistent, welcher jegliche Fragen mittels simpler Prompts auf Basis aller Informationen, die auf der Webseite verfügbar sind beantworten kann, hat das Potential, Zeit und Ressourcen zu schonen.
-
-In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse Antworten auf Fragen innert Sekunden liefern - ohne zeitaufwendiger Suche und Recherche auf der Webseite oder in Merkblättern. Die Herausforderung liegt darin, dass keine Fehlertoleranz besteht - die Antworten müssen stets präzise und akurat sein. Das Ziel ist, dass Mitarbeitende und langfristig auch Versicherte mit dem Bot schnell und effizient Fragen zur 1. Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
+Ein digitaler Assistent, der jegliche Fragen auf Basis der Informationen auf der EAK-Webseite beantworten kann, hat das Potential, viel Zeit und Ressourcen zu sparen.
+In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbeitenden der Ausgleichskasse diesen. Das System soll ihre Fragen schnell und korrekt beantworten - ohne zeitaufwendige Suche und Recherche auf der Webseite oder in Merkblättern. Die Herausforderung liegt darin, dass **keine Fehlertoleranz besteht**. Die Antworten müssen stets präzise und akkurat sein. Das Ziel ist, Fragen von Mitarbeitenden und langfristig auch von Versicherten direkt zu beantworten. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
 
 
 ## Lösungsansatz & Skripts
@@ -74,5 +73,5 @@ Diese Modelle können in bestimmten Fällen auch kombiniert werden: Die Embeddin
 
 ### Optimierungen - Vektordatenbank
 
-Wenn ein Embedding-Model verwendet wird, ist es sinnvoll eine Vektordatenbank zu verwenden, damit eine effektive Suche nach ähnlichen oder verwandten Elementen zu ermöglichen. Die Auswahl der richtigen Vektordatenbank ist von entscheidender Bedeutung. Dabei spielen folgende Faktoren eine wichtige Rolle: Grösse der Datenbank, Art der Embeddings, Art der Suchanfragen und Leistungsanforderungen.
+Wenn ein Embedding-Modell verwendet wird, ist es sinnvoll eine Vektordatenbank zu verwenden, damit eine effektive Suche nach ähnlichen oder verwandten Elementen zu ermöglichen. Die Auswahl der richtigen Vektordatenbank ist von entscheidender Bedeutung. Dabei spielen folgende Faktoren eine wichtige Rolle: Grösse der Datenbank, Art der Embeddings, Art der Suchanfragen und Leistungsanforderungen.
 [Quelle](https://betterprogramming.pub/openais-embedding-model-with-vector-database-b69014f04433)
