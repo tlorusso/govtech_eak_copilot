@@ -28,50 +28,41 @@ In einem ersten Schritt soll dieser Assistent mit Co-Pilot-Charakter den Mitarbe
 
 ## Lösungsansatz & Skripts
 
-Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an die Bedürfnisse anderer Verwaltungsstellen angepasst werden kann.
+Unser Code ist so aufgebaut, dass er als **generische Vorlage wiederverwendet und an die Bedürfnisse anderer Verwaltungsstellen angepasst werden kann**.
 
 1. Extraktion der Texte auf der Webseite mittels Webscraping [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/01_scraping)
-
-2. Embedding der Texte, semantisch nahe Textteile werden als «Context» zur Beantwortung der Frage als Prompt mitgegeben [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/02_embedding)
-
-3. Entwicklung eines GUI & Deployment der App [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/03_app)
-
-4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
-
-> Requirements : [Directus](https://github.com/directus/directus) / [Docker](https://github.com/docker)
+2. Embedding der Texte. Semantisch nahe Textteile werden als «Context» zur Beantwortung der Frage im Prompt mitgegeben [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/02_embedding)
+3. Entwicklung und Deployment einer Bot-App [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/03_app)
+4. Entwicklung eines Admin-Backends zur Erfassung von Fragen und Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui). Requirements: [Directus](https://github.com/directus/directus) / [Docker](https://github.com/docker)
 
 
 ## Architektur 
-Wir haben eine Architektur entworfen, die in den nächsten Schritten und auf lange Sicht dieses Problem lösen wird.
+Wir haben eine Architektur entworfen, die es dem Kunden erlaubt, dieses Pilotprojekt in eine betriebsfähige Lösung zu übersetzen.
 ![Architekture](https://user-images.githubusercontent.com/101552635/227547964-d869f7c8-b505-4384-a91d-5d04d1f867f6.png)
 
 
 
 ## Grundlagen Embedding / Fine-Tuning
 
-Embedding und Fine-Tuning sind zwei Methoden, um GPT-3 auf Daten zu trainieren. Sie unterscheiden sich jedoch in der Art des Trainings und dienen unterschiedlichen Zwecken. Der Hauptunterschied besteht darin, dass beim Embedding die Wörter und Texte als Vektoren dargestellt werden, während beim Fine-Tuning ein vortrainiertes Modell an bestimmte Daten angepasst wird.
-Bei beiden Modellen ist die Qualität der verarbeiteten Daten von entscheidender Bedeutung. Kurz gesagt: Je mehr Daten in hoher Qualität vorliegen, desto besser kann das Modell trainiert werden und desto bessere Ergebnisse liefert es.
+Embedding und Fine-Tuning sind zwei Methoden, um GPT-3 auf einen bestimmten Anwendungszweck anzupassen. Die beiden Methoden unterscheiden sich in der Art des Vorgehens und dienen unterschiedlichen Zwecken. Der Hauptunterschied besteht darin, dass beim Embedding alle Texte als Vektoren erfasst werden, während beim Fine-Tuning dass Modell an bestimmte Daten angepasst wird.
+Bei beiden Wegen ist die Qualität der Daten von entscheidender Bedeutung. Je mehr Daten in hoher Qualität vorliegen, desto besser kann das Modell angepasst werden und desto bessere Ergebnisse liefert es.
 [Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
 
 ### Embedding
 
-Beim Embedding werden Wörter, Dokumente oder Phrasen als Vektoren dargestellt, die sowohl die Bedeutung als auch den Kontext erfassen. Dies ermöglicht es, semantische Ähnlichkeiten zu erfassen, indem ähnliche Wörter / Phrasen innerhalb dieser Vektoren näher beieinanderliegen.
-Embedding ist die richtige Wahl, wenn ein grosser Textkorpus wie z.B. ein Lehrbuch, juristische Dokumente etc. zur Verfügung steht und das Modell darauf trainiert werden soll.
+Beim Embedding werden Wörter, Dokumente oder Phrasen als Vektoren dargestellt, die sowohl die Bedeutung als auch den Kontext erfassen. Dies ermöglicht es, semantische Ähnlichkeiten zu erfassen, indem ähnliche Wörter, Phrasen oder ganze Dokumente im semantischen Vektorraum nah beieinanderliegen.
 [Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
 
 ### Fine-Tuning
-
-Wenn jedoch weniger Wert auf spezifische Fakten gelegt wird und GPT-3 z.B. darauf trainiert werden soll, Nachrichten nach einem bestimmten Stil zu schreiben, dann ist das Fine-Tuning die richtige Wahl.
-Beim Fine-Tuning trainieren wir GPT-3 auf eine bestimmte Struktur, ein bestimmtes Muster oder einen bestimmten Sprachstil anhand von Beispieldaten. Kurz gesagt, das GPT-3 Basismodell wird mit neuen Mustern, Regeln und Vorlagen neu trainiert.
-Nach Angaben von OpenAI werden für ein erfolgreiches Modell einige tausend bis zehntausend Datenpunkte benötigt.
+Wenn weniger Wert auf spezifische Fakten gelegt wird und GPT z.B. darauf trainiert werden soll, Inhalte nach einem bestimmten Stil zu schreiben, dann ist das Fine-Tuning die richtige Wahl.
+Beim Fine-Tuning trainieren wir GPT-3 auf eine bestimmte Struktur, ein bestimmtes Muster oder einen bestimmten Sprachstil anhand von Beispieldaten. Das GPT-Basismodell wird mit neuen Daten feinabgestimmt.
+Nach Angaben von OpenAI werden für ein erfolgreiches Finetuning eines Modells einige tausend bis zehntausend Datenbeispiele benötigt.
 [Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
 
 ### Fine-Tuning vs Embedding
-
-Diese Modelle können in bestimmten Fällen auch kombiniert werden: Die Embedding-API wird verwendet, um eine Wissensbasis zu lernen und anschließend kann das Fine-Tuning verwendet werden, um auf eine bestimmte Art und Weise zu reagieren.
+Diese Modelle können in bestimmten Fällen auch kombiniert werden: Die Embedding-API wird verwendet, um eine Wissensbasis zu verwenden. Die erweiterten Prompts werden dann an ein feinabgestimmtes Modell geschickt.
 [Quelle](https://www.mlq.ai/gpt-3-fine-tuning-key-concepts/)
 
 ### Optimierungen - Vektordatenbank
-
-Wenn ein Embedding-Modell verwendet wird, ist es sinnvoll eine Vektordatenbank zu verwenden, damit eine effektive Suche nach ähnlichen oder verwandten Elementen zu ermöglichen. Die Auswahl der richtigen Vektordatenbank ist von entscheidender Bedeutung. Dabei spielen folgende Faktoren eine wichtige Rolle: Grösse der Datenbank, Art der Embeddings, Art der Suchanfragen und Leistungsanforderungen.
+Wenn sehr grosse Textmengen verwendet werden, kann es sinnvoll sein, eine Vektordatenbank zu verwenden, um eine schnelle und effiziente Suche zu ermöglichen. 
 [Quelle](https://betterprogramming.pub/openais-embedding-model-with-vector-database-b69014f04433)
