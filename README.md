@@ -8,10 +8,10 @@ Repository für die Challenge für die Entwicklung eines AI-Chatbots als Co-Pilo
 
 # Herausforderung / Ausgangslage
 
-- Die zahlreichen Mitarbeitenden der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html) sind täglich mit einer Fülle von telefonischen Anfragen konfrontiert. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, Leistungen wie auch EO- oder IV-Taggeldern.
-- Etwa 75% der Anfragen sind einfachere und können grundsätzlich anhand von Informationen auf der [Webseite der EAK](https://www.eak.admin.ch/eak/de/home.html) beantwortet werden. Die Suche nach den relevanten Informationen auf der Webseite ist zugleich zeitaufwendig.
-- Ein Assistenzsystem muss eine sehr hohe Antwortgenauigkeit bieten und im Idealfall keinerlei Fehler machen. 
-- Die EAK hat bisher keine Anfragedatenbank mit Fragen und Antworten von Kunden:innen geführt, die als Trainingsdaten verwendet werden konnte.
+- Die zahlreichen __Mitarbeitenden der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html)__ sind täglich mit __einer Fülle von telefonischen Anfragen konfrontiert__. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, Leistungen wie auch EO- oder IV-Taggeldern.
+- Etwa __75% der Anfragen sind einfach zu beantworten__ und können grundsätzlich anhand von Informationen auf der [Webseite der EAK](https://www.eak.admin.ch/eak/de/home.html) beantwortet werden. Die Suche nach den richtigen Antworten und Informationen auf der Webseite ist jedoch ziemlich zeitaufwendig.
+- Ein __Assistenzsystem__ zur Beantwortung der Fragen muss eine __sehr hohe Antwortgenauigkeit bieten und im Idealfall keinerlei Fehler machen__. 
+- Die __EAK hat bisher keine Anfragedatenbank__ mit Fragen und Antworten von Kunden:innen geführt, die als Trainingsdaten verwendet werden konnte.
 
 # Lösung
 
