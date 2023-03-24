@@ -25,6 +25,18 @@ Die Herausforderung liegt darin, dass keine Fehlertoleranz besteht - die Antwort
 
 Das Ziel ist, dass Mitarbeitende und langfristig auch Versicherte mit dem Bot schnell und effizient Fragen zur 1. Säule beantworten können. Der interne Co-Pilot kann als Grundlage für einen öffentlichen Chatbot oder gar Voicebot dienen.
 
+## Lösungsansatz & Skripts
+
+Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an die Bedürfnisse anderer Verwaltungsstellen angepasst werden kann.
+
+### 1. Extraktion der Texte auf der Webseite mittels Webscraping [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/01_scraping)
+
+### 2. Embedding der Texte, semantisch nahe Textteile werden als «Context» zur Beantwortung der Frage als Prompt mitgegeben [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/02_embedding)
+
+### 3. Entwicklung eines GUI, Deployment der App [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/03_app)
+
+### 4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
+
 ## Grundlagen Embedding / Fine-Tuning
 
 Embedding und Fine-Tuning sind zwei Methoden, um GPT-3 auf Daten zu trainieren. Sie unterscheiden sich jedoch in der Art des Trainings und dienen unterschiedlichen Zwecken. Der Hauptunterschied besteht darin, dass beim Embedding die Wörter und Texte als Vektoren dargestellt werden, während beim Fine-Tuning ein vortrainiertes Modell an bestimmte Daten angepasst wird.
@@ -53,15 +65,3 @@ Diese Modelle können in bestimmten Fällen auch kombiniert werden: Die Embeddin
 
 Wenn ein Embedding-Model verwendet wird, ist es sinnvoll eine Vektordatenbank zu verwenden, damit eine effektive Suche nach ähnlichen oder verwandten Elementen zu ermöglichen. Die Auswahl der richtigen Vektordatenbank ist von entscheidender Bedeutung. Dabei spielen folgende Faktoren eine wichtige Rolle: Grösse der Datenbank, Art der Embeddings, Art der Suchanfragen und Leistungsanforderungen.
 [Quelle](https://betterprogramming.pub/openais-embedding-model-with-vector-database-b69014f04433)
-
-## Lösungsansatz & Skripts
-
-Unser Code ist so aufgebaut, dass er als Blueprint wiederverwendet werden und an die Bedürfnisse anderer Verwaltungsstellen angepasst werden kann.
-
-### 1. Extraktion der Texte auf der Webseite mittels Webscraping [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/01_scraping)
-
-### 2. Embedding der Texte, semantisch nahe Textteile werden als «Context» zur Beantwortung der Frage als Prompt mitgegeben [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/02_embedding)
-
-### 3. Entwicklung eines GUI, Deployment der App [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/03_app)
-
-### 4. Entwicklung eines Admin-Backends zur Erfassung von Fragen / Antworten [(Code)](https://github.com/tlorusso/govtech_eak_copilot/tree/main/10_admin_ui)
