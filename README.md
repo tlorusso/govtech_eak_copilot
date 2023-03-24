@@ -27,3 +27,7 @@ Das Ziel ist, dass Mitarbeitende, und langfristig auch Versicherte, damit schnel
 - Extraktion der Texte auf der Webseite mittels Webscraping
 - Training eines openAI-Modells mit den Webseitexten als Input
 
+## Scripts 
+
+
+
