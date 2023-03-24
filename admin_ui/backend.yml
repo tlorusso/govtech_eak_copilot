@@ -1,0 +1,23 @@
+version: '3'
+services:
+  directus:
+    image: directus/directus:latest
+    ports:
+      - 8055:8055
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/uploads:/directus/uploads
+      - ${WEBAPP_STORAGE_HOME}/database:/directus/database
+    environment:
+      KEY: '255d861b-5ea1-5996-9aa3-922530ec40b1'
+      SECRET: '6116487b-cda1-52c2-b5b5-c8022c45e263'
+
+      DB_CLIENT: 'mysql'
+      DB_HOST: 'directus.mysql.database.azure.com'
+      DB_PORT: '3306'
+      DB_DATABASE: 'directus'
+      DB_USER: 'directus'
+      DB_PASSWORD: 'assatusd1r3ctu5#'
+
+
+      ADMIN_EMAIL: 'admin@example.com'
+      ADMIN_PASSWORD: 'd1r3ctu5'
