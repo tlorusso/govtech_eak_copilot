@@ -58,7 +58,7 @@ Diese Modelle können in bestimmten Fällen auch kombiniert werden: Die Embeddin
 
 ### Webscraping via Python
 
-Link zu Scripts
+[scripts](https://github.com/tlorusso/govtech_eak_copilot/tree/main/01_scraping)
 
 ### Training eines OpenAI-Modells mittels Embeddings
 
