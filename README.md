@@ -8,8 +8,21 @@ Repository für die Challenge «Entwicklung eines AI-Chatbots als Co-Pilot für 
 
 ---
 
-### TLDR; Die [fertige Applikation ist hier erreichbar](http://64.226.69.64/). 🤖  
+### 🎉 Die Arbeit hat den 1. Platz "Kreativstes Projekt" gewonnen. 🎉
+
 ---
+
+### TLDR; Die fertige Applikation ist [hier erreichbar](http://64.226.69.64/). 🤖  
+---
+
+# Team
+- **Gian Derungs** – Lehrling, Bundesamt für Informatik und Telekommunikation BIT
+- **Damian Wasmer** - Software Ingenieur Professional, Bundesamt für Informatik und Telekommunikation BIT
+- **Elias Medawar** – Head of Chapter .NET, Bundesamt für Informatik und Telekommunikation BIT
+- **Thomas Lo Russo** - Team Data, Statistisches Amt Kanton Zürich
+- **Patrick Arnecke** – Team Data, Statistisches Amt Kanton Zürich
+- **Simon Ruefenacht** – Wirtschaftsinformatiker, EAK (Sponsor der Challenge)
+
 
 # Herausforderung / Ausgangslage
 - Die zahlreichen __Mitarbeitenden der [eidgenössichen Ausgleichskasse](https://www.eak.admin.ch/eak/de/home.html)__ sind täglich mit __einer Fülle von telefonischen Anfragen konfrontiert__. Diese betreffen Fragen bezüglich Beitragszahlungen, Familienzulagen, Leistungen wie auch EO- oder IV-Taggeldern.
